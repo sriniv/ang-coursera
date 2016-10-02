@@ -3,7 +3,9 @@
 
 angular.module('LunchCheck', [])
 
-.controller('LunchCheckController', function($scope) {
+.controller('LunchCheckController', LunchCheckController);
+
+function LunchCheckController($scope, $filter, $injector) {
   $scope.lunchMenu = '';
 
   $scope.checkLunchMenu = function() {
@@ -19,6 +21,6 @@ angular.module('LunchCheck', [])
     }
   };
 
-})
+};
 
 })();
