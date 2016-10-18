@@ -15,13 +15,31 @@ angular.module('NarrowItDownApp', [])
 NarrowItDownController.$inject = ['MenuSearchService'];
 
 function NarrowItDownController(MenuSearchService) {
+
     var menu = this;
+    menu.search = "";
+
+    menu.getMatchingMenuItems = function (searchTerm) {
+
+      menu.found = [];
+
+      for(var i=0; i < menu.items.menu_items.length; i++){
+        if (menu.items.menu_items[i].description.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+          var item =
+          {
+              "short_name" : menu.items.menu_items[i].short_name,
+              "name" : menu.items.menu_items[i].name,
+              "description" : menu.items.menu_items[i].description
+          };
+          menu.found.push(item);
+        }
+      }
+    };
 
     var promise = MenuSearchService.getMenuItems();
     //
     promise.then(function (response) {
       menu.items = response.data;
-      console.log(menu.items);
     })
     .catch(function (error) {
       console.log("Something went terribly wrong.");
