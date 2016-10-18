@@ -9,7 +9,7 @@
 angular.module('NarrowItDownApp', [])
 .controller('NarrowItDownController', NarrowItDownController)
 .service('MenuSearchService', MenuSearchService)
-.constant('ApiBasePath', "http://davids-restaurant.herokuapp.com");
+.constant('ApiBasePath', "https://davids-restaurant.herokuapp.com");
 
 // MenuCategoriesController.$inject = ['MenuCategoriesService'];
 NarrowItDownController.$inject = ['MenuSearchService'];
