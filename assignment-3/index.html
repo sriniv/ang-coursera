@@ -27,18 +27,5 @@
   </div>
   <found-items items="menu.found" on-remove="menu.removeItem(index);"></found-items>
 
-  <div ng-repeat="item in menu.found">
-    <div class="row">
-      <div class="col-sm-1">&nbsp;</div>
-      <div class="col-sm-1">{{item.short_name}}</div>
-      <div class="col-sm-1">{{item.name}}</div>
-      <div class="col-sm-3">{{ item.description}}</div>
-      <div class="form-group narrow-button">
-        <button class="btn btn-primary"
-          ng-click="menu.getMatchingMenuItems(search);">Don't want this one!</button>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
