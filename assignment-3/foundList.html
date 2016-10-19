@@ -1,0 +1,17 @@
+
+<div ng-repeat="item in foundList.items">
+  <div class="row">
+    <div class="col-sm-1">&nbsp;</div>
+    <div class="col-sm-1">{{item.short_name}}</div>
+    <div class="col-sm-2">{{item.name}}</div>
+    <div class="col-sm-3">{{item.description}}</div>
+    <div class="form-group narrow-button">
+      <button class="btn btn-primary"
+        ng-click="foundList.onRemove({index: $index});">Don't want this one!</button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-1">&nbsp;</div>
+  <div class="col-sm-2" ng-if="foundList.emptySearchTerm()">Nothing Found!!!</div>
+</div>
