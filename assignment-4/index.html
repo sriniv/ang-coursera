@@ -6,13 +6,18 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body class="container">
-    <h1>Welcome to Chinese Restaurant Menu Selection</h1>
-
-    <!-- This will display the categories  -->
-    <ui-view></ui-view>
-
-    <loading-spinner></loading-spinner>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Welcome - Selection</h1>
+        </div>
+        <div class="col-sm-6">
+          <loading-spinner></loading-spinner>
+        </div>
+      </div>
+      <ui-view></ui-view>
+    </div>
 
     <!-- Libraries -->
     <script src="lib/angular.min.js"></script>

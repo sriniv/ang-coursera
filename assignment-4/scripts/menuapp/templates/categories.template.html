@@ -1,3 +1,4 @@
-  <div ng-repeat="item in $ctrl.items">
-    <a ui-sref="categories.itemDetail({categoryShortName: item.short_name })"> {{item.short_name }}  {{ item.name }} </a>
-  </div>
+<div ng-repeat="item in $ctrl.items" class="col-sm-3">
+    <a class="list-group-item list-group-item-info" ui-sref="categories.itemDetail({categoryShortName: item.short_name })">{{ item.name }} </a>
+</div>
+<ui-view></ui-view>
