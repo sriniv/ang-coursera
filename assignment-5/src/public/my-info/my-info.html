@@ -1,0 +1,35 @@
+<div class="container">
+  <h2></h2>
+
+  <div ng-if="myInfoCtrl.signUpData == undefined">
+    Not Signed Up Yet.
+    <button class="btn-lg btn-primary" ui-sref="public.signup">
+      Sign Up Now!
+    </button>
+  </div>
+
+  <div ng-if="myInfoCtrl.signUpData != undefined">
+    <div class="row">
+      <div class="col-sm-12">
+        <div><span class="label label-primary"> First Name: </span>{{myInfoCtrl.signUpData.firstName}}</div>
+        <div><span class="label label-primary"> Last Name: </span>{{myInfoCtrl.signUpData.lastName}}</div>
+        <div><span class="label label-primary"> Email: </span>{{myInfoCtrl.signUpData.email}}</div>
+        <div><span class="label label-primary"> Phone: </span>{{myInfoCtrl.signUpData.phone}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="menu-item-photo">
+          <div>{{myInfoCtrl.signUpData.response.short_name}}</div>
+          <img class="img-responsive"
+            ng-src="{{myInfoCtrl.getImageUrl()}}/{{myInfoCtrl.signUpData.response.short_name}}.jpg"
+            alt="{{myInfoCtrl.signUpData.response.name}}">
+        </div>
+      </div>
+      <div class="menu-item-description col-sm-7">
+        <h3 class="menu-item-title">{{myInfoCtrl.signUpData.response.name}}</h3>
+        <p class="menu-item-details">{{myInfoCtrl.signUpData.response.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
