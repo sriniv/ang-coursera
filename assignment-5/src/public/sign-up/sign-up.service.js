@@ -3,7 +3,7 @@
 
 angular.module('public')
 .service('SignUpService', SignUpService)
-.constant('APIUrl', 'http://sriniv.herokuapp.com/menu_items');
+.constant('APIUrl', 'https://sriniv.herokuapp.com/menu_items');
 
 SignUpService.$inject = ['$http','APIUrl'];
 function SignUpService($http, APIUrl) {

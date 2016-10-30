@@ -3,7 +3,7 @@
 
 angular.module('public')
 .controller('MyInfoController', MyInfoController)
-.constant('ImageUrl', 'http://sriniv.herokuapp.com/images');
+.constant('ImageUrl', 'https://sriniv.herokuapp.com/images');
 
 MyInfoController.$inject = ['DataService', 'ImageUrl'];
 
